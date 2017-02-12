@@ -1,9 +1,5 @@
-$( document ).ready(function() {
 
-	$('.navbar-nav > li > a').click(function(){
-		console.log("you clicked navbar link " + this.innerHTML);
-	    $('.navbar-nav > li').removeClass('active');
-	    $(this).closest('li').addClass('active');
-	}); 
-
-});
+function disableTextArea() {
+	console.log("disable");
+	document.getElementById("question_answer").readOnly = true;
+}

@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   #before_action :confirm_logged_in, :except => [:home, :quiz_mode, :result]
   before_action :authenticate_user!, :except => [:home, :quiz_mode, :result]
-  before_action :check_user, :only => [:edit, :delete, :update, :destroy]
+  before_action :check_user, :only => [:edit, :delete, :update, :destroy, :show]
 
   def home
     @users = User.all

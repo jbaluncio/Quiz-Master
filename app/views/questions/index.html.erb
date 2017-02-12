@@ -19,7 +19,7 @@
 				</div>
 				<div class="blog-body">
 					<th>Answer:</th>
-					<p><%= question.answer %></p>
+					<tr><%= question.answer %></tr>
 				</div>
 				<div class="actions">
 					<%= link_to("Show", question_path(question) , :class => "action") %>
@@ -31,5 +31,12 @@
 	</div>
 
 <% end %>
+
+<script>
+	$( document ).ready(function() {
+	    $('.navbar-nav > li').removeClass('active');
+	    $('#qlist').addClass('active');
+	});
+</script>
 
 

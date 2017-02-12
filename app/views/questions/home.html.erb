@@ -11,7 +11,7 @@
 					
 					<% if user.questions.count > 0 %>
 						<div class="list-questions">
-							<a href= <%= quiz_mode_question_path(user)  %>><p>Quiz Prepared by: <%= user.first_name + " " + user.last_name %></p></a>
+							<p>Quiz Prepared by: <%= user.first_name + " " + user.last_name %>      <a href= <%= quiz_mode_question_path(user)  %>>     Click to take the test >></a></p>
 						</div>
 					<% end %>
 
@@ -20,3 +20,9 @@
 	</div>
 </div>
 
+<script>
+$( document ).ready(function() {
+	    $('.navbar-nav > li').removeClass('active');
+	    $('#home-page').addClass('active');
+});
+</script>

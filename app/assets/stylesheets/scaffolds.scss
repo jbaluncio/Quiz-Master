@@ -98,7 +98,7 @@ label {
   color: white;
 }
 
-a.brand:hover {
+a.brand:hover{
   background-color: black;
   color: #FFD34E;
   text-decoration: none; 
@@ -106,6 +106,8 @@ a.brand:hover {
 
 .list-questions {
   a {
+    background-color: white;
     color: blue;
   }
 }
+
