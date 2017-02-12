@@ -1,0 +1,19 @@
+<% @page_title = "Edit Question" %>
+	<%#= link_to("<< Back to list", posts_path , :class => "back-link") %>
+
+<!--<div class="for-sale-items new">-->
+<div class="panel panel-default devise-bs page-center">
+  <!--<h2>New Post</h2>-->
+  <div class="panel-heading">
+    <h4><%= t('.sign_in', :default => "Edit Question") %></h4>
+  </div>	
+  <div class="panel-body">
+	<%= form_for(@question) do |f| %>
+
+		<!-- Render from partial template _form.html.erb -->
+		<%= render(:partial => 'form', :locals => {:f => f}) %>
+
+		<%= f.submit  t('.sign_in', :default => "Update"), class: "btn btn-primary" %>
+	<% end %>
+  </div>  
+</div>  

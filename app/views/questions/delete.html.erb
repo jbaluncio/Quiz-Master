@@ -1,0 +1,19 @@
+<% @page_title = "Delete Question" %>
+
+<%= link_to("<< Back to List", questions_path , :class => "back-link") %>
+
+<div class="panel panel-default devise-bs delete page-center">
+	<h2>Delete Question</h2>
+
+	<%= form_for(@question, :method => "delete") do |f| %>
+	<div class="panel-body">
+		<p>Are you sure to permanently delete this question?</p>
+		<p class="reference-name"><%= raw @question.content %></p>
+		<div class="form-buttons">
+			<%#= f.submit("Delete Post") %>
+			<%= f.submit  t('.sign_in', :default => "Delete"), class: "btn btn-primary" %>
+		</div>
+	</div>	
+	<% end %>
+</div>
+

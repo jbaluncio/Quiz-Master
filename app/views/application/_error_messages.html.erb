@@ -1,0 +1,6 @@
+<% if object && object.errors.size > 0 %>
+		<% flash[:alert] = "#{object.errors.size} error prohibited this record from being save" %> 
+		<% object.errors.full_messages.each do |msg|  %>
+			<% flash[:alert] << msg  %>
+		<% end %>				
+<% end %>

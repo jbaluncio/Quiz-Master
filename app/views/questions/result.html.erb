@@ -1,0 +1,20 @@
+<% @page_title = "Result" %>
+
+<%# flash notice was transferred to 'admin' layout for DRY  %>
+<%# if current_user && current_user.id == @post.user_id %>
+<%= link_to("<< Back to List", root_path , :class => "back-link") %>
+<%# end %>
+
+<div class="panel panel-default devise-bs page-center">
+	<!--<h2>Show Post</h2>-->
+	<div class="panel-heading">
+    	<h4><%= t('.sign_in', :default => "Result") %></h4>
+  	</div>	
+	<div class="panel-body">
+		<div summary="Show post detail view">
+			<div class="blog-title">
+				<tr><%= @result %></tr><br>
+			</div>	
+		</div>
+	</div>
+</div>

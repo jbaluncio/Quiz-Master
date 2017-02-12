@@ -1,0 +1,35 @@
+<% @page_title = "All Questions" %>
+<%= image_tag("plus_sign.png", size: "11x11", alt: "+") %>
+<%= link_to "ADD A QUESTION", new_question_path  %>
+<br><br><br>
+
+<div class="panel panel-default devise-bs page-center">
+	<div class="panel-heading">
+		<h4><%= t('.sign_in', :default => "List of Questions") %></h4>
+	</div>	
+</div>
+
+<% @questions.each do |question| %>
+
+	<div class="panel panel-default devise-bs page-center">
+		<div class="panel-body">
+			<div class="listing" summary="Questions list">
+				<div class="blog-title">
+					<h2><%= raw question.content %></h2>
+				</div>
+				<div class="blog-body">
+					<th>Answer:</th>
+					<p><%= question.answer %></p>
+				</div>
+				<div class="actions">
+					<%= link_to("Show", question_path(question) , :class => "action") %>
+					<%= link_to("Edit", edit_question_path(question) , :class => "action") %>
+					<%= link_to("Delete", delete_question_path(question) , :class => "action") %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% end %>
+
+

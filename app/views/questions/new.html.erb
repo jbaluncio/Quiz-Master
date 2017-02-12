@@ -1,0 +1,49 @@
+<% @page_title = "New Question" %>
+	<%#= link_to("<< Back to list", posts_path , :class => "back-link") %>
+
+<!--<div class="for-sale-items new">-->
+<div class="panel panel-default devise-bs page-center">
+  <!--<h2>New Post</h2>-->
+  <div class="panel-heading">
+    <h4><%= t('.sign_in', :default => "New Question") %></h4>
+  </div>	
+  <div class="panel-body">
+	<%= form_for(@question) do |f| %>
+
+		<!-- Render from partial template _form.html.erb -->
+		<%= render(:partial => 'form', :locals => {:f => f}) %>
+
+		<%= f.submit  t('.sign_in', :default => "Create"), class: "btn btn-primary" %>
+	<% end %>
+  </div>  
+</div>  
+
+
+<div class="panel panel-default devise-bs page-center">
+	<div class="panel-heading">
+		<h4><%= t('.sign_in', :default => "List of Questions") %></h4>
+	</div>	
+</div>
+
+
+<% @questions.each do |question| %>
+
+	<div class="panel panel-default devise-bs page-center">
+		<div class="panel-body">
+			<div class="listing" summary="Questions list">
+				<div class="blog-title">
+					<h2><%= raw question.content %></h2>
+				</div>
+				<div class="blog-body">
+					<p><%= question.answer %></p>
+				</div>
+				<div class="actions">
+					<%= link_to("Show", question_path(question) , :class => "action") %>
+					<%= link_to("Edit", edit_question_path(question) , :class => "action") %>
+					<%= link_to("Delete", delete_question_path(question) , :class => "action") %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% end %>

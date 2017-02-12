@@ -1,0 +1,29 @@
+<% @page_title = "Show Question" %>
+
+<%# flash notice was transferred to 'admin' layout for DRY  %>
+<%# if current_user && current_user.id == @post.user_id %>
+<%= link_to("<< Back to List", questions_path , :class => "back-link") %>
+<%# end %>
+
+<div class="panel panel-default devise-bs page-center">
+	<!--<h2>Show Post</h2>-->
+	<div class="panel-body">
+		<div summary="Show post detail view">
+			<div class="blog-title">
+				<tr><%= raw @question.content %></tr>
+			</div>	
+			<div>
+				<th>Answer:</th>
+				<tr><%= @question.answer %></tr>	
+			</div>
+		</div>
+
+		<%# if current_user && current_user.id == @post.user_id %>
+		<div class="actions">
+			<%= link_to("Edit", edit_question_path(@question) , :class => "action") %>
+			<%= link_to("Delete", delete_question_path(@question) , :class => "action") %>
+		</div>
+		<%# end %>
+	</div>
+
+</div>

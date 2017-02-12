@@ -1,0 +1,136 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+/*.navbar {
+	background-color: black;
+}*/
+
+
+#content {
+	margin-top: 100px;
+}
+
+
+/* small action buttons */
+.actions {
+	width: 200px;
+	a.action {
+		float: left;
+		min-width: 3.5em;
+		padding: 1px 2px;
+		margin: 2px 5px;
+		font-size: 0.7em;
+        color: blue;
+	}
+}
+
+.actions a:hover {
+    background: white;
+}
+
+.btn-primary {
+	background-color: #ffc475;
+	border-color: #ffab3a;
+}
+
+.btn-primary:hover {
+	background-color: #ffb44d;
+	border-color: #ffab3a;
+}
+
+
+
+/* From Homepage Style */
+.navbar-default {
+   /* background-color: transparent; */
+   background-color: black; 
+}
+
+.nav > li > a {
+    padding: 0px;
+}
+.navbar-brand
+{
+	padding: 0px;
+	height: inherit;
+	font-family: 'Lato', sans-serif;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+	font-size: 34px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #FFD34E;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+	color: #FFD34E;
+}
+
+.navbar-fixed-top {
+    padding: 10px 0;
+    transition: all 0.5s;
+}
+
+.top-nav-collapse {
+    /*background: rgba(0,0,0,0.8);*/
+    background: rgba(254,146,0,0.8);
+    padding: 10px 0;
+} 
+
+
+@media (min-width: 451px) and (max-width: 900px){
+    .section-title{
+        margin-bottom: 15px;
+     }
+
+    .navbar-fixed-top {
+    	padding: 20px 0;
+    	transition: all 0.5s;
+	}
+
+}
+
+@media (min-width: 20px) and (max-width: 450px){
+
+	.navbar-fixed-top {
+    	padding: 10px 0;
+    	transition: all 0.5s;
+	}
+
+
+    .navbar-toggle:hover, .navbar-toggle{
+        background-color: #fff;
+        color: #000;
+    }
+    .navbar-toggle{
+        margin-top: 0px;
+    }
+    .navbar-default .navbar-nav > li > a{
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.32);
+        color: #000;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+        background-color: rgba(255, 255, 255, 0.32);
+        color: #FFD34E;
+    }
+
+    .section-title{
+        margin-bottom: 15px;
+     }
+}

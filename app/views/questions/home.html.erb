@@ -1,0 +1,22 @@
+<% @page_title = "Home" %>
+
+<div class="panel panel-default devise-bs page-center">
+  <!--<h2>New Post</h2>-->
+  <div class="panel-heading">
+    <h4><%= t('.sign_in', :default => "List of Quizzes") %></h4>
+  </div>	
+  	<div class="panel-body">
+  		<div class="listing" summary="Quizzes list">
+	  		<% @users.each do |user| %>
+					
+					<% if user.questions.count > 0 %>
+						<div class="list-questions">
+							<a href= <%= quiz_mode_question_path(user)  %>><p>Quiz Prepared by: <%= user.first_name + " " + user.last_name %></p></a>
+						</div>
+					<% end %>
+
+			<% end %>
+		</div>
+	</div>
+</div>
+

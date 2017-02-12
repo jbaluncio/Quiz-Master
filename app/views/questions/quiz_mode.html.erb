@@ -1,0 +1,34 @@
+<% @page_title = "Quiz Mode" %>
+
+<%# flash notice was transferred to 'admin' layout for DRY  %>
+<%# if current_user && current_user.id == @post.user_id %>
+<%= link_to("<< Back to List", root_path , :class => "back-link") %>
+<%# end %>
+
+<div class="panel panel-default devise-bs page-center">
+	<!--<h2>Show Post</h2>-->
+	<div class="panel-heading">
+    	<h4><%= t('.sign_in', :default => "Quiz Mode") %></h4>
+  	</div>	
+	<div class="panel-body">
+		<div summary="Show post detail view">
+			<div class="blog-title">
+				<tr><%= raw @question.content %></tr>
+			</div>
+
+			<%= form_for(@question, :url => result_question_path(@question), :method => "get") do |f| %> 
+                <%= error_messages_for(f.object)  %>
+                <div class="form-group">
+                	<% @question.answer = " " %>
+		 			<th><%= f.label(:answer) %></th>
+					<td><%= f.text_area(:answer, class: "form-control") %></td>
+				</div>
+                <%#= submit_tag "Submit Answer", class: "btn btn-primary" %> 
+                <%= f.submit  t('.sign_in', :default => "Submit Answer"), class: "btn btn-primary" %> 
+            <% end %>	
+
+		</div>
+
+	</div>
+
+</div>
